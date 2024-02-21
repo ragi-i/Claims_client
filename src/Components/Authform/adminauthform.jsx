@@ -7,7 +7,7 @@ import name_icon from '../Assets/Name.png';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
-const AdminAuthForm = ({}) => {
+const AdminAuthForm = () => {
     const [data, setData] = useState({
         name: "",
         email: "",
@@ -16,7 +16,7 @@ const AdminAuthForm = ({}) => {
     });
     const navigate = useNavigate();
     const [action,setAction]=useState(" Admin Sign Up");
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
 
     const handleChange = ({ currentTarget: input }) => {
         setData({ ...data, [input.name]: input.value });
@@ -36,7 +36,8 @@ const AdminAuthForm = ({}) => {
             }
         } catch (error) {
             if (error.response && error.response.status >= 400 && error.response.status < 500) {
-                setError(error.response.data.message);
+                // setError(error.response.data.message);
+                error.send(error.response.data.message);
             }
         }
     }
