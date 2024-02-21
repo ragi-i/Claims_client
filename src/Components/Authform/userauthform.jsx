@@ -26,7 +26,7 @@ const UserAuthForm = ({ }) => {
 
     const navigate = useNavigate();
     const [action, setAction] = useState("Sign Up");
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
 
 
 
@@ -50,7 +50,7 @@ const UserAuthForm = ({ }) => {
             // }
         } catch (error) {
             if (error.response && error.response.status >= 400 && error.response.status < 500) {
-                setError(error.response.data.message);
+                error.send(error.response.data.message);
             }
         }
     }

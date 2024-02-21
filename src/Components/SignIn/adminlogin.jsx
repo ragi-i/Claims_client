@@ -13,7 +13,7 @@ const AdminLogin = () => {
 
     const navigate = useNavigate();
     const [action, setAction] = useState("Admin Login");
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
 
     const handleChange = ({ currentTarget: input }) => {
         setData({ ...data, [input.name]: input.value });
@@ -32,7 +32,7 @@ const AdminLogin = () => {
             }
         } catch (error) {
             if (error.response && error.response.status >= 400 && error.response.status < 500) {
-                setError(error.response.data.message);
+                error.send(error.response.data.message);
             }
         }
     }

@@ -13,7 +13,7 @@ const UserLogin = () => {
 
     const navigate = useNavigate();
     const [action, setAction] = useState("Login");
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
 
     const handleChange = ({ currentTarget: input }) => {
         setData({ ...data, [input.name]: input.value });
@@ -37,7 +37,7 @@ const UserLogin = () => {
             // }
         } catch (error) {
             if (error.response && error.response.status >= 400 && error.response.status < 500) {
-                setError(error.response.data.message);
+                error.send(error.response.data.message);
             }
         }
     }
