@@ -13,7 +13,7 @@ import axios from 'axios';
 import AdminAuthForm from './adminauthform';
 
 
-const UserAuthForm = ({ }) => {
+const UserAuthForm = () => {
     const [data, setData] = useState({
         username: "",
         name: "",
