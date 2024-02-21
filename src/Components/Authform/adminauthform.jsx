@@ -5,7 +5,7 @@ import email_icon from '../Assets/email.jpg';
 import password_icon from '../Assets/password.png';
 import name_icon from '../Assets/Name.png';
 import axios from 'axios';
-import useNavigate from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const AdminAuthForm = ({}) => {
     const [data, setData] = useState({

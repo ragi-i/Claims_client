@@ -1,7 +1,7 @@
 // AuthForm.jsx
 import React, { useState } from 'react';
 import './userauthform.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import email_icon from '../Assets/email.jpg';
 import password_icon from '../Assets/password.png';
 import name_icon from '../Assets/Name.png';
