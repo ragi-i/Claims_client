@@ -21,7 +21,7 @@ const UserHomePage = () => {
         
         console.log("****",policies);
            
-    }, []);
+    },[]);
     
     console.log("----->>>", policies)
 

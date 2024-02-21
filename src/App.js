@@ -1,7 +1,6 @@
-import logo from './logo.svg';
+
 import React from 'react';
 import './App.css';
-import AdminAuthForm from './Components/Authform/adminauthform';
 import UserAuthForm from '../src/Components/Authform/userauthform';
 import AdminHomePage from './Components/adminhomepage/Adminhome';
 import UserHomePage from './Components/userhomepage/Userhome';
