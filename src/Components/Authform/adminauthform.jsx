@@ -25,11 +25,11 @@ const AdminAuthForm = ({}) => {
     const handleSubmit = async () => {
         try {
             if (action === "Admin Sign Up") {
-                const url = "http://localhost:8080/auth/adminregister";
+                const url = "https://claims-project.onrender.com/auth/adminregister";
                 const { data: res } = await axios.post(url, data);
                 console.log(res.message);
             } else if (action === "Admin Login") {
-                const url = "http://localhost:8080/auth/adminlogin";
+                const url = "https://claims-project.onrender.com/auth/adminlogin";
                 const { data: res } = await axios.post(url, data);
                 console.log(res.message);
                 navigate('/adminlogin');

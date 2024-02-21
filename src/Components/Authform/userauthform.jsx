@@ -38,7 +38,7 @@ const UserAuthForm = ({ }) => {
     const handleSubmit = async () => {
         try {
             if (action === "Sign Up") {
-                const url = "http://localhost:8080/auth/userregister";
+                const url = "https://claims-project.onrender.com/auth/userregister";
                 const { data: res } = await axios.post(url, data);
                 console.log(res.message);
                 navigate('/userlogin');

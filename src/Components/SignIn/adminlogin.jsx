@@ -22,7 +22,7 @@ const AdminLogin = () => {
     const handleSubmit = async () => {
         try {
             if (action === "Login") {
-                const url = "http://localhost:8080/auth/adminlogin"; // Corrected endpoint for user login
+                const url = "https://claims-project.onrender.com/auth/adminlogin"; // Corrected endpoint for user login
                 const { data: res } = await axios.post(url, data);
                 console.log(res.message);
                 // Assuming successful login redirects to user home page

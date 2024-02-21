@@ -7,7 +7,7 @@ const UserHomePage = () => {
 
     useEffect(() => {
         // Fetch all policies from the backend
-        axios.get('http://localhost:8080/user/policy')
+        axios.get('https://claims-project.onrender.com/user/policy')
         .then(response => {
             // console.log(response.data); 
             setPolicies(response?.data?.policies);
@@ -40,7 +40,7 @@ const UserHomePage = () => {
                 const email = localStorage.getItem('email');
                 console.log("this is email", email)
                 // Send a POST request to add the policy to the user's profile
-                axios.post('http://localhost:8080/user/selectPolicy', {
+                axios.post('https://claims-project.onrender.com/user/selectPolicy', {
                     email,
                     policyId
                 })

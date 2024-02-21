@@ -28,7 +28,7 @@ const ClaimForm = ({ userId, policies }) => {
                 throw new Error('Invalid Policy ID');
             }
             // Submit claim data
-            const response = await axios.post('http://localhost:8080/user/claim', {
+            const response = await axios.post('https://claims-project.onrender.com/user/claim', {
                 userId,
                 policyId,
                 amountRequested,
